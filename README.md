@@ -38,5 +38,5 @@ $ terraform apply
 TODO
 ----
 
-[ ] BUG: `public-private` won't route traffic through the route table + internet gateway
-[ ] implement more complex multi-az vpc
+- [ ] BUG: `public-private` won't route traffic through the route table + internet gateway
+- [ ] implement more complex multi-az vpc
