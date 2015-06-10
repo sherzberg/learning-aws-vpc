@@ -3,24 +3,25 @@ learning-aws-vpc
 
 This repo is used to explore AWS VPC using [Terraform](https://www.terraform.io/)
 
-public-private
---------------
+We will explore a few different `scenarios` from
+[here](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenarios.html).
 
-This subfolder shows how to build a simple VPC with a public and private
-subnet.
+Scenario 1
+-----------------
+
+* `scenario-1-public`
+
+This subfolder is a replica of the AWS docs Scenario 1. This terraform config will
+create a simple VPC with a single instance in a public subnet.
 
 Setup
 -----
 
 First, need to export `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
-Next, create a `public-private/variables.tf` file the following as the contents:
+Next, create a `scenario-1-public/override.tf` file the following as the contents:
 
 ```
-variable "region" {
-    default = "us-east-1"
-}
-
 resource "aws_key_pair" "dev" {
   key_name = "dev-key"
   public_key = "CHANGE ME TO THE CONTENT OF YOUR PUBLIC SSH KEY"
@@ -38,5 +39,4 @@ $ terraform apply
 TODO
 ----
 
-- [x] BUG: `public-private` won't route traffic through the route table + internet gateway
-- [ ] implement more complex multi-az vpc
+- [ ] Scenario 2

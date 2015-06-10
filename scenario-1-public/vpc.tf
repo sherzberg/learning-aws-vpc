@@ -30,15 +30,6 @@ resource "aws_subnet" "public" {
     }
 }
 
-/* resource "aws_subnet" "private_subnet" { */
-/*     vpc_id = "${aws_vpc.main.id}" */
-/*     cidr_block = "${var.private_subnet_cidr}" */
-
-/*     tags { */
-/*         Name = "private" */
-/*     } */
-/* } */
-
 resource "aws_route_table" "public" {
     vpc_id = "${aws_vpc.main.id}"
     route {
