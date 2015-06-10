@@ -97,5 +97,15 @@ to ssh to that instance now:
 $ ssh ubuntu@zz.ZZZ.zz.ZZZ
 ```
 
-Notice, you will NOT be able to ssh to the instance in the private subnet (db_01)
+You will NOT be able to ssh to the instance in the private subnet (db_01)
+
+Notice
+======
+
+**NOTICE**
+
+Because this launches real instances, you may be charged for usage. Be sure to
+run `terraform destroy` in each of the folders that you do a `terraform apply` in.
+
+I'm not responsible for any balances you build up!
 
