@@ -11,8 +11,8 @@ Scenario 1
 
 * `scenario-1-public`
 
-This subfolder is a replica of the AWS docs Scenario 1. This terraform config will
-create a simple VPC with a single instance in a public subnet.
+This subfolder is a replica of the AWS docs [Scenario 1](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario1.html).
+This terraform config will create a simple VPC with a single instance in a public subnet.
 
 Setup
 -----
