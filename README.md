@@ -34,6 +34,20 @@ Now you can try it out:
 $ cd public-private
 $ terraform plan
 $ terraform apply
+...
+
+State path: terraform.tfstate
+
+Outputs:
+
+  eip_01 = XX.XXX.XX.XXX
+```
+
+After some amount of time, you should get an `Ouputs` like above. You should be able
+to ssh to that instance now:
+
+```bash
+$ ssh ubuntu@XX.XXX.XX.XXX
 ```
 
 TODO
