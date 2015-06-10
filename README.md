@@ -7,7 +7,7 @@ We will explore a few different `AWS scenarios` from
 [here](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenarios.html).
 
 Scenario 1
------------------
+==========
 
 * `scenario-1-public`
 
@@ -31,7 +31,7 @@ resource "aws_key_pair" "dev" {
 Now you can try it out:
 
 ```bash
-$ cd public-private
+$ cd scenario-1-public
 $ terraform plan
 $ terraform apply
 ...
@@ -50,7 +50,52 @@ to ssh to that instance now:
 $ ssh ubuntu@XX.XXX.XX.XXX
 ```
 
-TODO
-----
+Scenario 2
+==========
 
-- [ ] Scenario 2
+* `scenario-2-public-private`
+
+This subfolder is a replica of the AWS docs [Scenario 2](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html).
+This terraform config will create a simple VPC with an instance in a public subnect, an
+instance in a private subnet and a NAT instance.
+
+Setup
+-----
+
+First, need to export `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+Next, create a `scenario-2-public-private/override.tf` file the following as the contents:
+
+```
+resource "aws_key_pair" "dev" {
+  key_name = "dev-key"
+  public_key = "CHANGE ME TO THE CONTENT OF YOUR PUBLIC SSH KEY"
+}
+```
+
+Now you can try it out:
+
+```bash
+$ cd scenario-2-public-private
+$ terraform plan
+$ terraform apply
+...
+
+State path: terraform.tfstate
+
+Outputs:
+
+  db_01_ip   = xx.XXX.xx.XXX
+  nat_01_eip = yy.YYY.yy.YYY
+  web_01_eip = zz.ZZZ.zz.ZZZ
+```
+
+After some amount of time, you should get an `Ouputs` like above. You should be able
+to ssh to that instance now:
+
+```bash
+$ ssh ubuntu@zz.ZZZ.zz.ZZZ
+```
+
+Notice, you will NOT be able to ssh to the instance in the private subnet (db_01)
+
