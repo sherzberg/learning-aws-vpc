@@ -22,7 +22,7 @@ variable "region" {
 }
 
 resource "aws_key_pair" "dev" {
-  key_name = "dev-key" 
+  key_name = "dev-key"
   public_key = "CHANGE ME TO THE CONTENT OF YOUR PUBLIC SSH KEY"
 }
 ```
@@ -38,5 +38,5 @@ $ terraform apply
 TODO
 ----
 
-- [ ] BUG: `public-private` won't route traffic through the route table + internet gateway
+- [x] BUG: `public-private` won't route traffic through the route table + internet gateway
 - [ ] implement more complex multi-az vpc
