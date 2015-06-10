@@ -3,7 +3,7 @@ learning-aws-vpc
 
 This repo is used to explore AWS VPC using [Terraform](https://www.terraform.io/)
 
-We will explore a few different `scenarios` from
+We will explore a few different `AWS scenarios` from
 [here](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenarios.html).
 
 Scenario 1
