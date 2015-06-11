@@ -109,3 +109,9 @@ run `terraform destroy` in each of the folders that you do a `terraform apply` i
 
 I'm not responsible for any balances you build up!
 
+Planned Features
+================
+
+ - [ ] Multiple instances in public and private subnets
+ - [ ] Setup simple app with frontend proxy and a backend database
+ - [ ] Custom ami's using Packer
