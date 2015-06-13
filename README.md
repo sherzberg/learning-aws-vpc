@@ -115,3 +115,4 @@ Planned Features
  - [ ] Multiple instances in public and private subnets
  - [ ] Setup simple app with frontend proxy and a backend database
  - [ ] Custom ami's using Packer
+ - [ ] VPN into vpc
