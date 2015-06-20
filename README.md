@@ -1,21 +1,18 @@
-learning-aws-vpc
-================
+## learning-aws-vpc
 
 This repo is used to explore AWS VPC using [Terraform](https://www.terraform.io/)
 
 We will explore a few different `AWS scenarios` from
 [here](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenarios.html).
 
-Scenario 1
-==========
+### Scenario 1
 
 * `scenario-1-public`
 
 This subfolder is a replica of the AWS docs [Scenario 1](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario1.html).
 This terraform config will create a simple VPC with a single instance in a public subnet.
 
-Setup
------
+### Setup
 
 First, need to export `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
@@ -59,8 +56,7 @@ This subfolder is a replica of the AWS docs [Scenario 2](http://docs.aws.amazon.
 This terraform config will create a simple VPC with an instance in a public subnect, an
 instance in a private subnet and a NAT instance.
 
-Setup
------
+### Setup
 
 First, need to export `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
@@ -99,8 +95,7 @@ $ ssh ubuntu@zz.ZZZ.zz.ZZZ
 
 You will NOT be able to ssh to the instance in the private subnet (db_01)
 
-Notice
-======
+### Notice
 
 **NOTICE**
 
@@ -109,9 +104,10 @@ run `terraform destroy` in each of the folders that you do a `terraform apply` i
 
 I'm not responsible for any balances you build up!
 
-Planned Features
-================
+### Planned Features
 
+ - [x] AWS Scenario 1
+ - [x] AWS Scenario 2
  - [ ] Multiple instances in public and private subnets
  - [ ] Setup simple app with frontend proxy and a backend database
  - [ ] Custom ami's using Packer
