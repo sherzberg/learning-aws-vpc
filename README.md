@@ -106,7 +106,5 @@ I'm not responsible for any balances you build up!
 
  - [x] AWS Scenario 1
  - [x] AWS Scenario 2
- - [ ] Multiple instances in public and private subnets
- - [ ] Setup simple app with frontend proxy and a backend database
- - [ ] Custom ami's using Packer
  - [ ] VPN into vpc
+ - [ ] Custom internal dns
